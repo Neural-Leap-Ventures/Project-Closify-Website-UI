@@ -1,5 +1,5 @@
 <!DOCTYPE html><!--  This site was created in Webflow. https://www.webflow.com  -->
-<!--  Last Published: Wed Aug 16 2023 18:38:47 GMT+0000 (Coordinated Universal Time)  -->
+<!--  Last Published: Mon Oct 09 2023 17:48:57 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="64da5e414654d2541940b928" data-wf-site="63d79e9dd52bf9b397fe7ab1">
 <head>
   <meta charset="utf-8">
@@ -31,16 +31,37 @@
   .intl-tel-input .country-list .divider {
   width:100%;
 }
+.scrolled-nav {
+  /*background-color: #fff !important;*/
+  backdrop-filter: blur(10px);
+  transition: backdrop-filter 200ms linear;
+}
 </style>
 </head>
 <body class="bg-black">
-  <div class="container">
-    <div class="div-nav">
-      <a href="#" class="w-inline-block"><img src="images/logo.png" loading="lazy" alt="" class="image-117"></a>
-      <a href="#" class="nav-btn w-button">Get Early Access</a>
+  <div class="absolute-top sticky-nav">
+    <div class="container">
+      <div class="div-nav">
+        <a href="index.html" class="w-inline-block"><img src="images/logo.png" loading="lazy" alt="" class="image-117"></a>
+        <div class="div-block-451">
+          <a href="index.html" class="link-block-9 w-inline-block">
+            <h4 class="heading-180"><strong class="bold-text-2">Home</strong></h4>
+          </a>
+          <a href="about-us.html" class="link-block-10 w-inline-block">
+            <h4>‍<strong class="bold-text-3">About Us</strong></h4>
+          </a>
+          <a href="our-mission.html" class="link-block-11 w-inline-block">
+            <h4><strong class="bold-text-4">Mission</strong></h4>
+          </a>
+          <a href="q-a.html" aria-current="page" class="link-block-12 w-inline-block w--current">
+            <h4 class="heading-181">Q &amp; A</h4>
+          </a>
+        </div>
+        <a href="contact-us.html" class="nav-btn w-button">Get Early Access</a>
+      </div>
     </div>
   </div>
-  <div class="mx-width-1200px my-100">
+  <div class="mx-width-1200px my-100 mt-150">
     <div class="mb-100">
       <h1 class="mb-20px text-center">Q&amp;A Section<br></h1>
     </div>
@@ -149,13 +170,26 @@
         <div class="div-block-447">
           <div class="div-block-448">
             <h3>CLOSIFY</h3>
-            <p class="paragraph-2">Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor</p>
-            <div>©2022. Closify</div>
+            <div class="text-block-2">Copyright 2023. All Rights Reserved</div>
+            <div class="div-block-450">
+              <a href="#" class="link-block-6 w-inline-block"><img src="images/Facebook_1.png" loading="lazy" alt="" class="image-119"></a>
+              <a href="#" class="link-block-6 w-inline-block"><img src="images/Twitter_1.png" loading="lazy" alt="" class="image-119"></a>
+              <a href="#" class="link-block-6 w-inline-block"><img src="images/Instagram_1.png" loading="lazy" alt="" class="image-119"></a>
+            </div>
           </div>
           <div class="div-block-449">
-            <a href="#" class="w-inline-block"><img src="images/Facebook_1.png" loading="lazy" alt=""></a>
-            <a href="#" class="w-inline-block"><img src="images/Twitter_1.png" loading="lazy" alt=""></a>
-            <a href="#" class="w-inline-block"><img src="images/Instagram_1.png" loading="lazy" alt=""></a>
+            <a href="index.html" class="link-block-2 w-inline-block">
+              <p>Home</p>
+            </a>
+            <a href="about-us.html" class="link-block-3 w-inline-block">
+              <p>About Us</p>
+            </a>
+            <a href="our-mission.html" class="link-block-4 w-inline-block">
+              <p>Mission</p>
+            </a>
+            <a href="q-a.html" aria-current="page" class="link-block-5 w-inline-block w--current">
+              <p>Q &amp; A</p>
+            </a>
           </div>
         </div>
       </div>
@@ -174,5 +208,14 @@ input.on("change", function () {
   input.intlTelInput("setNumber", input.val());
 });
     </script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script>
+$(function () {
+  $(document).scroll(function () {
+    var $nav = $(".sticky-nav");
+    $nav.toggleClass('scrolled-nav', $(this).scrollTop() > $nav.height());
+  });
+});
+</script>
 </body>
 </html>
