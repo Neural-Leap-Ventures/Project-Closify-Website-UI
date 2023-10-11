@@ -2686,6 +2686,11 @@ figcaption {
   max-width: 1000px;
 }
 
+.container-720px.mt-100px.mt-50.mxw-1000.mt0 {
+  max-width: 900px;
+  margin-top: 0;
+}
+
 .d-flex-wrap {
   grid-column-gap: 0px;
   grid-row-gap: 0px;
@@ -2771,6 +2776,10 @@ figcaption {
 
 .mt-100.mb-100.d-flex-wrap-center.my-50 {
   margin-top: 50px;
+}
+
+.mt-100.mb-100.d-flex-wrap-center.my-50.d-none {
+  display: none;
 }
 
 .thumb-social-icon {
@@ -3027,6 +3036,10 @@ figcaption {
   padding-bottom: 10px;
   font-family: Poppins, sans-serif;
   font-weight: 700;
+}
+
+.nav-link.w--current {
+  font-size: 1rem;
 }
 
 .div-block-457 {
